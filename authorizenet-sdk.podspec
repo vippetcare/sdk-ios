@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
   s.version          = "1.9.2"
   s.summary          = "iOS SDK for Authorize.Net Payments"
   s.description      = "The iOS SDK provides a fast and easy way for iPhone/iPad application developers to quickly integrate mobile payment without having to write the network communication, XML generation/parsing, and encoding of the data to the Authorize.net gateway."
-  s.homepage         = "https://github.com/authorizenet/sdk-ios"
+  s.homepage         = "https://github.com/vippetcare/sdk-ios"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'https://github.com/AuthorizeNet/sdk-ios/blob/master/LICENSE'
   s.author           = { "brianmc" => "bmcmanus@authorize.net" }
-  s.source           = { :git => "https://github.com/authorizenet/sdk-ios.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/vippetcare/sdk-ios.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/AuthorizeNetDev'
 
   s.platform     = :ios, '7.0'
@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
 
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'SenTestingKit'
+  # s.frameworks = 'SenTestingKit'
   s.xcconfig = { 'HEADER_SEARCH_PATHS' => '$(SDKROOT)/usr/include/libxml2'}
   # s.dependency 'AFNetworking', '~> 2.3'
 end
