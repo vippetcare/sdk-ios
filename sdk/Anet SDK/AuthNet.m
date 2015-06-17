@@ -41,8 +41,6 @@ NSString *kMobileSvcURL = @"https://apitest.authorize.net/MobileService/GatewayA
 @property (nonatomic, strong) UIViewController *loginVC;
 @property (nonatomic, strong) UIViewController *checkoutVC;
 
-- (AuthNet *)initWithEnvironment:(AUTHNET_ENVIRONMENT) e;
-
 - (BOOL) issueSSLPost:(NSString *)body withURL:(NSString *)url;
 
 // Asynchronous response handling

@@ -79,6 +79,7 @@
 #import "TestAccountRegistrationResponse.h"
 #import "FingerPrintObjectType.h"
 #import "OpaqueDataType.h"
+#import "AuthNet.h"
 
 #define RUN_UNTIL_TIME 0.1
 // Duplicate Window is the number a second that
@@ -294,6 +295,7 @@ typedef enum AuthNetRequestType {
 @property (nonatomic, readonly) SEL checkoutSelector;
 @property (nonatomic, retain) NSMutableDictionary *merchantFields;
 
+- (AuthNet *)initWithEnvironment:(AUTHNET_ENVIRONMENT)e;
 
 /**
  * Initialization of the AuthNet Singleton with the development server type.
