@@ -43,7 +43,7 @@
 						"MerchantAuthentication.transactionKey = %@\n"
 						"MerchantAuthentication.sessionToken = %@\n"
 						"MerchantAuthentication.password = %@\n"
-						"MerchantAuthentication.mobileDeviceId = %@\n",
+						"MerchantAuthentication.mobileDeviceId = %@\n"
                         "MerchantAuthentication.fingerPrintType = %@\n", //SHANKAR 26th June
 						self.name,
 						self.transactionKey,

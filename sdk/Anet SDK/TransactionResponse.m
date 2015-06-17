@@ -50,7 +50,7 @@
 		self.accountNumber = nil;
 		self.accountType = nil;
         self.splitTenderId = nil;
-		self.messages = [NSMutableArray array];
+		self.messages = [Messages messages];
 		self.errors = [NSMutableArray array];
 		self.splitTenderPayment = nil;
 		self.userFields = [NSMutableArray array];

@@ -55,7 +55,7 @@
 	
     int n, i, alternate, sum;
 	
-    n = [toTest length];
+    n = (int)[toTest length];
 	
     if (n < 13 || n > 19)
         return 0;

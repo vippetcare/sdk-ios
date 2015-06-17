@@ -77,7 +77,7 @@
                 NSArray *captcha = [ResponseMember elementsForName:@"a:Messages"];
                 for (GDataXMLElement *messageMember in captcha) {
                     NSArray *imagHash = [messageMember elementsForName:@"a:Status"];
-                    for (GDataXMLElement *statusMember in imagHash) {
+                    for (GDataXMLElement *__unused statusMember in imagHash) {
                         GDataXMLElement *status = (GDataXMLElement *) [imagHash objectAtIndex:0];
                         m.resultCode = status.stringValue;
                     }
@@ -101,7 +101,7 @@
                 NSArray *captcha = [ResponseMember elementsForName:@"a:Messages"];
                 for (GDataXMLElement *messageMember in captcha) {
                     NSArray *imagHash = [messageMember elementsForName:@"a:Status"];
-                    for (GDataXMLElement *statusMember in imagHash) {
+                    for (GDataXMLElement *__unused statusMember in imagHash) {
                         GDataXMLElement *status = (GDataXMLElement *) [imagHash objectAtIndex:0];
                         m.resultCode = status.stringValue;
                     }

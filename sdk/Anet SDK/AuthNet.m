@@ -343,7 +343,7 @@ static AuthNet *sharedInstance = nil;
     if (header)
     {
         [r addValue:header forHTTPHeaderField:@"SOAPAction"];//] caseSensitive:YES];
-        NSString *msgLength = [NSString stringWithFormat:@"%d", [body length]];
+        NSString *msgLength = [NSString stringWithFormat:@"%llu", (UInt64)[body length]];
         [r setValue:msgLength forHTTPHeaderField:@"Content-Length"];
         
     }
@@ -672,10 +672,10 @@ static AuthNet *sharedInstance = nil;
     if ([[e domain] isEqualToString:NSURLErrorDomain])
     {
         errorCode = ([e code] == NSURLErrorNotConnectedToInternet) ? kErrorNoInternet : kErrorServerUnreachable;
-		NSLog(@"errorCode = %d", errorCode);
+		NSLog(@"errorCode = %d", (int)errorCode);
         NSLog(@"error = %@", e);
     }
-	NSLog(@"NSError code = %d", [e code]);
+	NSLog(@"NSError code = %d", (int)[e code]);
 	NSLog(@"NSError description = %@", [e localizedDescription]);
 	
 	if ([self.delegate respondsToSelector:@selector(connectionFailed:)]) {
@@ -720,9 +720,9 @@ static AuthNet *sharedInstance = nil;
     {
         errorCode = kErrorReturnedFromServer;
     }	
-	NSLog(@"errorCode = %d", errorCode);
+	NSLog(@"errorCode = %d", (int)errorCode);
 	NSLog(@"response = %@", urlResponse);
-	NSLog(@"response.statusCode = %d", [urlResponse statusCode]);
+	NSLog(@"response.statusCode = %d", (int)[urlResponse statusCode]);
 }
 
 @end
