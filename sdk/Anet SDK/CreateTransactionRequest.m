@@ -88,7 +88,7 @@
                    [super.anetApiRequest stringOfXMLRequest],
                    [self.transactionRequest stringOfXMLRequest]];
     
-    NSLog(@"Create Transaction Request: %@", s);
+    // NSLog(@"Create Transaction Request: %@", s);
     return s;
 }
 
